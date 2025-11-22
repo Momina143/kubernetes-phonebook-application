@@ -49,11 +49,11 @@ This project consists of three microservices:
                     │                                              │
                     └────────────────────────┬─────────────────────┘
                                              │
-                                 ┌───────────▼───────────┐
+                                 ┌───────────▼────────────┐
                                  │      MySQL Service     │
                                  │     Service: ClusterIP │
                                  │  PersistentVolumeClaim │
-                                 └───────────┬───────────┘
+                                 └───────────┬────────────┘
                                              │
                                      PersistentVolume
 
