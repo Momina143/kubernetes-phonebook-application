@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: phonebook-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: "phonebook.mominadevops.xyz"
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: webserver-svc
+                port:
+                  number: 80
+          - path: /resultserver
+            pathType: Prefix
+            backend:
+              service:
+                name: resultserver-svc
+                port:
+                  number: 80

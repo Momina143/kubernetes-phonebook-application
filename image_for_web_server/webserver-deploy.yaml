@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webserver
+  labels:
+    app: webserver
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webserver
+  template:
+    metadata:
+      labels:
+        app: webserver
+    spec:
+      containers:
+      - name: webserver
+        image: momina111/webapp:1.0
+        ports:
+        - containerPort: 80
+        envFrom:
+        - secretRef:
+            name: mysql-secret
+        - configMapRef:
+            name: webserver-config
+        resources: {}
+  
