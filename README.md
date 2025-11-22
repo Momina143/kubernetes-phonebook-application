@@ -1,4 +1,4 @@
-# Kubernetes Microservices Phonebook Application (Python + MySQL)
+# Kubernetes Microservices Phonebook Application (Python + MySQL + Docker + K8S)
 
 A fully containerized, microservices-based Phonebook application
 deployed on a Kubernetes cluster. The application code (`app.py`) was
